@@ -33,7 +33,7 @@ def debugProcessViaRegexes(exe, exeArgs):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-e", '--exe', help='Regex of running executable to debug/attach to')
-    parser.add_argument("-a", '--args', help='Regex of args passed to the executable to attach/debug')
+    parser.add_argument("-e", '--exe', help='Regex of running executable to debug/attach to', required=True)
+    parser.add_argument("-a", '--args', help='Regex of args passed to the executable to attach/debug', required=True)
     args = parser.parse_args()
     debugProcessViaRegexes(args.exe, args.args)
